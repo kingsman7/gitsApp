@@ -1,0 +1,20 @@
+<div class="app--container__sidebar bg-dark border-right p-3" id="sidebar">
+  <div class="text-light">
+    <h3>Gits App</h3>
+    <hr class="text-light">
+  </div>
+  <div class="list-group list-reset">
+    <div class="text-light">
+      <h5>Historial</h5>
+      <hr class="text-light">
+    </div>
+    <a 
+      (click)="search(history)"
+      *ngFor="let history of histories" 
+      href="#" class="list-group-item list-action">
+      {{history | titlecase}}
+    </a>
+  </div>
+
+  <button *ngIf="histories.length > 0" (click)="deleteHistory()" type="button" class="btn btn-light mt-5" >Borrar Historial</button>
+</div>

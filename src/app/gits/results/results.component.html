@@ -1,0 +1,18 @@
+<div class="col">
+  <div class="row gy-2">
+    <div 
+      *ngFor="let git of gits"  
+      class="col-md-4 col-sm-6 animate__animated animate__fadeIn">
+      <div class="card">
+        <div class="card-body">
+          <img 
+            class="card-img-top"
+            [src]="git.images.downsized_medium.url" 
+            [alt]="git.title" 
+          />
+          <p class="text-title text-center fw-bolder rounded-pill text-white mt-3 py-1 bg-dark">{{git.title}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
